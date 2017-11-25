@@ -1,5 +1,3 @@
-// propPath
-
 const propPath = require('crocks/Maybe/propPath')
 
 const input = {

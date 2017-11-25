@@ -1,8 +1,8 @@
 // safeLift
 
+const isNumber = require('crocks/predicates/isNumber')
 const safe = require('crocks/Maybe/safe')
 const safeLift = require('crocks/Maybe/safeLift')
-const isNumber = require('crocks/predicates/isNumber')
 
 const inc = n => n + 1
 

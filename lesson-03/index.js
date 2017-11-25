@@ -1,6 +1,5 @@
-// const Maybe = require('crocks/Maybe')
-const safe = require('crocks/Maybe/safe')
 const isNumber = require('crocks/predicates/isNumber')
+const safe = require('crocks/Maybe/safe')
 
 const inc = n => n + 1
 const dbl = n => n * 2

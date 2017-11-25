@@ -1,0 +1,6 @@
+// Maybe when dealing with an API...
+
+// Some data with an optional field...
+// If it's present, get it and transform it some way
+// Otherwise, we just return nothing... idk
+

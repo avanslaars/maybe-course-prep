@@ -1,4 +1,3 @@
-// const Maybe = require('crocks/Maybe')
 const prop = require('crocks/Maybe/prop')
 
 const inc = n => n + 1

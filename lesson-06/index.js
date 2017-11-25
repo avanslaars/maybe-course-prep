@@ -3,6 +3,9 @@ const Maybe = require('crocks/Maybe')
 const prop = require('crocks/Maybe/prop')
 
 // Fake API call that resolves to a Maybe
+// Maybe the "right" thing to do is here is have the data come back
+// slightly more complex and use the maybe to extract a value
+// Doesn't change the point of the example, but maybe makes it a bit more realistic?
 const getData = () => new Promise((resolve, reject) => {
   const result = {
     status: 200,
