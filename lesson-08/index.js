@@ -1,50 +1,24 @@
-const chain = require('crocks/pointfree/chain')
-const compose = require('crocks/helpers/compose')
-const isNumber = require('crocks/predicates/isNumber')
-const map = require('crocks/pointfree/map')
-const option = require('crocks/pointfree/option')
-const propPath = require('crocks/Maybe/propPath')
+// alt and coalesce
+const prop = require('crocks/Maybe')
 const safe = require('crocks/Maybe/safe')
-
-// Try to use `prop`, `map`, `chain`
-const dbl = n => n * 2
-const input = {
-  a: {
-    b: {
-      value: 1
-    }
-  }
+/*
+ * Create a function that returns a Maybe (fake API call perhaps)
+ * That function is only concerned with data...
+ * Data can be either displayed in UI or used to create a URL slug
+ * The default for the url slug (404 page or something) can be pulled
+ * from a variable, so we want to make sure it's in the proper format
+ * so we'll still transform it the same way...
+ *
+ * The coalesce version of this can use a function to get the default value
+ */
+const page = {
+  name: "This is a sample page"
 }
 
-const input2 = {
-  a: {
-    b: {
-      value: "oops"
-    }
-  }
+const getPageName = (obj) => {
+  return prop('name', page)
+    .chain(safe(v => Boolean(v) && typeof v === 'string'))
 }
 
-const input3 = {
-  a: {
-    b: {
-      c: "oops"
-    }
-  }
-}
-
-// propPath handles the property not being present, but doesn't check type
-// const result = propPath(['a', 'b', 'value'], input)
-//   .chain(safe(isNumber)) // if it's a Just string, this will result in a Nothing, chained to unnest
-//   .map(dbl) // Skipped for Nothing,
-//   .option(5)
-
-const safeResult = compose(
-  option(5),
-  map(dbl),
-  chain(safe(isNumber)),
-  propPath(['a', 'b', 'value'])
-)
-
-const result = safeResult(input)
-
-console.log(result) // 2
+const slug = getPageName(page)
+  .map(str => )

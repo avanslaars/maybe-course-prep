@@ -1,15 +1,13 @@
 <html>
-    <head>
-      <title>Using the Maybe type in React</title>
-    </head>
-    <body>
-      <div id="app">
-        <input v-model="num" placeholder="number to double">
-        <button v-on:click="update">Double</button>
-        {{ result }}
-      </div>
-      <script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
-      <script src="https://unpkg.com/crocks@0.8.1/dist/crocks.min.js"></script>
-      <script src="./index.js"></script>
-    </body>
-  </html>
+  <head>
+    <title>Using the Maybe type in React</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="https://unpkg.com/crocks@0.8.1/dist/crocks.min.js"></script>
+    <script src="./index.js" type="text/babel"></script>
+  </body>
+</html>
