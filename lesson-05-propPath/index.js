@@ -1,3 +1,5 @@
+// Safely access nested properties with propPath
+
 const propPath = require('crocks/Maybe/propPath')
 
 const input = {

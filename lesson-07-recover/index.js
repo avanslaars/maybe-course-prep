@@ -2,11 +2,15 @@
 const identity = require('crocks/combinators/identity')
 const Maybe = require('crocks/Maybe')
 const prop = require('crocks/Maybe/prop')
-const {compose, intersperse, join, split, toLower} = require('ramda')
+const {compose, join, split, toLower} = require('ramda')
 const safe = require('crocks/Maybe/safe')
+const isEmpty = require('crocks/predicates/isEmpty')
+const isString = require('crocks/predicates/isString')
+const and = require('crocks/logic/and')
+const not = require('crocks/logic/not')
 
-const isNonEmptyString = val => Boolean(val) && typeof val === 'string'
-const createSlug = compose(join(''), intersperse('-'), split(' '), toLower)
+const isNonEmptyString = and(not(isEmpty), isString)
+const createSlug = compose(join('-'), split(' '), toLower)
 const defaultPagename = "page not found"
 const page = {
   name: "This is a sample page"

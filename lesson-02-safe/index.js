@@ -1,3 +1,5 @@
+// Create the `safe` utility function
+
 const Maybe = require('crocks/Maybe')
 
 const inc = n => n + 1

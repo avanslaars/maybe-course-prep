@@ -1,3 +1,5 @@
+// Using Maybe to safely access properties of an object
+
 const prop = require('crocks/Maybe/prop')
 
 const inc = n => n + 1

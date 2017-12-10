@@ -1,3 +1,4 @@
+// safeDom utility
 
 // When the button isn't found, addEventListener results in a TypeError
 // Uncaught TypeError: Cannot read property 'addEventListener' of null

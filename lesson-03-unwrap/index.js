@@ -1,3 +1,5 @@
+// Unwrapping values from a Maybe
+
 const isNumber = require('crocks/predicates/isNumber')
 const safe = require('crocks/Maybe/safe')
 

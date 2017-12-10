@@ -1,3 +1,5 @@
+// Understanding the Maybe type...
+
 const Maybe = require('crocks/Maybe')
 
 /**
@@ -30,17 +32,17 @@ const dbl = n => (console.log('running dbl with', n), n * 2)
 
 /*
  * We can make our code safer with the Maybe type...
- * Maybe is basically a Union type
- * a Maybe is actually a Just type that contains a value
- * or Nothing
- *
+ * Maybe is a Sum type, or a Union type
+ * Essentially, it can be one of 2 underlying types
+ * In the case of the Maybe, it will be a Just, holding a value
+ * or a Nothing, which represents... well, nothing :)
  */
 
 /*
  * Let's see how to create a Maybe...
  */
 
-// Import Maybe from crocks
+// Import Maybe from crocks...
 // const Maybe = require('crocks/Maybe)
 
 // Create a Just that holds a value
