@@ -13,8 +13,10 @@ const Maybe = require('crocks/Maybe')
  * the result being logged out
  */
 
-const inc = n => (console.log('running inc with', n), n + 1)
-const dbl = n => (console.log('running dbl with', n), n * 2)
+const inc = n => n + 1
+const dbl = n => n * 2
+// const inc = n => (console.log('running inc with', n), n + 1)
+// const dbl = n => (console.log('running dbl with', n), n * 2)
 // const value = 1
 
 // const result = inc(value)
@@ -42,6 +44,7 @@ const dbl = n => (console.log('running dbl with', n), n * 2)
  * Let's see how to create a Maybe...
  */
 
+// Install crocks in root directory `npm i -S crocks`
 // Import Maybe from crocks...
 // const Maybe = require('crocks/Maybe)
 
