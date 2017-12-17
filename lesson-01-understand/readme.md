@@ -28,7 +28,7 @@ We'll use the Crocks library for these examples, but there are other implementat
 We can directly create either of the underlying types:
 
 ```js
-const Maybe = require('crocks/Maybe)
+const Maybe = require('crocks/Maybe')
 
 const justAValue = Maybe.Just(2)
 console.log(justAValue) // Just 2 is printed to the console
